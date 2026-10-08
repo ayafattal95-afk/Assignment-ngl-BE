@@ -67,3 +67,53 @@
 - verify an account switch isVerified to true.
 - resend otp.[in-case otp expired, in-case reset password]
 - reset password.
+
+=================================
+
+* todo Session3:
+- customize app error.
+- intro to Dependency inversion principle . [class] SOLID >> functions
+- reset password.
+
+=================================
+
+* todo Session4:
+- validation using Zod.
+
+=================================
+
+* todo Session5:
+- social login using Google.
+    - get idToken from FE.
+    - verify idToken. ask Google
+    - get payload from IdToken. {id, name, pp, email, dob, phone}
+    - if user exist >> generate token.
+    - if user not exist >> create user >> generate token.
+
+=================================
+
+* todo Session6:
+  
+1. refactor code structure.
+      - lib: common functions which related to my app [ngl].
+      - pkg: common packages which related to any app [base-code].
+      - express - bcrypt - jsonwebtoken >> ngl
+2. caching.
+      - mandatory features
+      - reduce latency. FE <-> BE <-> DB.
+      - avid frequent DB queries
+      - hash-map. [key-value]
+      - mandatory to apply to invalidate cache. [Create, update, delete]
+3. custom config.
+4. withCache middleware. [intercept]
+5. idempotency.
+6. correlationId.
+7. mailJet.
+
+=================================
+
+* todo Session7:
+1. correlationId.
+2. idempotency.
+3. mailJet.
+4. send message [anonymous - public]

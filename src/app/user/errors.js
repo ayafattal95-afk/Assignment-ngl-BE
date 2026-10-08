@@ -1,4 +1,6 @@
-export  const userNotExist = new Error('User does not exist');
-export const userAlreadyVerified = new Error('User already verified');
-export const userAlreadyExists = new Error('user already exists');
-export const userNotVerified = new Error('user Not Verified');
+import {AppError} from "../../lib/error/error.js";
+
+export  const userNotExist = new AppError('User does not exist', 404);
+export const userAlreadyVerified = new AppError('User already verified', 409);
+export const userAlreadyExists = new AppError('user already exists', 409);
+export const userNotVerified = new AppError('user Not Verified', 403);
